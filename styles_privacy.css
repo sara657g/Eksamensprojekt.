@@ -1,0 +1,175 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #2D2828;
+  color: white;
+}
+nav{
+  background: #2D2828;
+  height: 80px;
+  width: 100%;
+
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+label.logo img {
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+  z-index: 1;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+  
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  
+}
+a:hover{
+  background: none;
+  color: #556E53;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 5px;
+  }
+  nav ul li a{
+    font-size: 16px; 
+  }
+  
+  }
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2D2828;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    
+  }
+  nav ul li a{
+    font-size: 20px;
+    
+  }
+  a:hover{
+    background: none;
+    color: #556E53;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.privatlivspolitik {
+  line-height: 1.6;
+}
+
+section {
+  margin-bottom: 20px;
+}
+  
+  header, main, footer {
+    padding: 20px;
+  }
+  
+  .Privat {
+    font-size: 30px;
+    text-align: center;
+  }
+
+.privatlivspolitik
+{
+  line-height: 25px;
+}
+
+
+  footer {
+    background: #2D2828;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    line-height: 25px;
+  }
+  
+  footer .privacy-link a {
+    color: #fff; /* Skift farven til det ønskede */
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+  }
+     
+   
+  /* Gør footer responsiv ved hjælp af media queries */
+  @media (max-width: 600px) {
+    footer {
+      font-size: 14px;
+    }
+  }
+  

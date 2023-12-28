@@ -1,0 +1,250 @@
+/* Nulstil standardmargener og -paddings for alle elementer */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+/* Basisindstillinger for hele dokumentet */
+body {
+  font-family: arial, sans-serif;
+}
+
+/* Stil for navigationsbar */
+nav {
+  background: #2D2828;
+  height: 80px;
+  width: 100%;
+}
+
+
+/* Stil for logoet i navigationsbar */
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+/* Stil for billeder inden i logoet */
+label.logo img {
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* Stil for navigationslinks i navigationsbar */
+nav ul {
+  float: right;
+  margin-right: 20px;
+  z-index: 1;
+}
+
+/* Stil for enkelt navigationspunkt */
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+/* Stil for links inden i navigationspunkterne */
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+/* Ændring ved hover-effekten på links */
+a:hover {
+  background: none;
+  color: #556E53;
+  transition: .5s;
+}
+
+/* Stil for hamburger-ikonet til mindre skærme */
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Skjul checkboxen til hamburger-menuet */
+#check {
+  display: none;
+}
+
+/* Billeder i indholdet skal være responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  bottom: 1000;
+}
+
+/* Responsivt layout for mindre skærme (max-width: 952px) */
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 5px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    bottom: 1000px;
+  }
+}
+
+/* Responsivt layout for mindre skærme (max-width: 858px) */
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2D2828;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover {
+    background: none;
+    color: #556E53;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Stil for sektionen med baggrundsbillede */
+section {
+  background: url(friends-cheering-sport-bar-together.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+  opacity: 88%;
+}
+
+/* Stil for hovedindholdet */
+.content {
+  padding: 20px;
+}
+
+/* Stil for overlayen med knapper på baggrundsbilledet */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Stil for responsive knapper på baggrundsbilledet */
+.responsive-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border-color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Tilføj margin til højre for knapperne */
+.responsive-button + .responsive-button {
+  margin-left: 20px;
+}
+
+/* Tilføj hover-effekt til knapperne */
+.responsive-button:hover {
+  background-color: white;
+}
+
+/* Yderligere stil for responsive knapper */
+.responsive-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 20px;
+  position: relative;
+  z-index: 1; /* Sæt z-indekset højere end baggrundsbilledet gøre så man kan se kanppen på baggrundsbilledet */
+  top: -50px;
+}
+
+
+/* Stil for tekst-overlayen */
+.text-overlay {
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: white;
+  line-height: 25px;
+}
+
+.text-overlay h1 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.text-overlay p {
+  font-size: 16px;
+}
+
+/* Stil for footer-sektionen */
+footer {
+  background: #2D2828;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  line-height: 25px;
+}
+
+footer .privacy-link a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+
+/* Responsiv stil for footer ved hjælp af media queries */
+@media (max-width: 600px) {
+  footer {
+    font-size: 14px;
+  }
+}

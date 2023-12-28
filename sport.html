@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags for character set and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Titel på siden -->
+  <title>Lobbyen</title>
+
+  <!-- Link til den eksterne CSS-fil for sportssektionen -->
+  <link rel="stylesheet" href="sports.css">
+
+  <!-- Link til ikoner fra Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  <!-- Link til Google Fonts - Odibee Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+  <!-- Navigationssektion -->
+  <nav>
+    <!-- Logo og link til startsiden -->
+    <label class="logo"><a href="index.html"><img src="Logo.png" alt="Logo"></a></label>
+
+    <!-- Checkbox og label for responsivt design på mindre skærme -->
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <!-- Liste med navigationspunkter -->
+    <ul>
+      <li><a class="active" href="lobbyen.html">LOBBYEN</a></li>
+      <li><a href="sport.html">SPORT</a></li>
+      <li><a href="Arrangementer.html">ARRANGEMENTER</a></li>
+      <li><a href="info.html">INFO</a></li>
+    </ul>
+  </nav>
+
+  <!-- Tom sektion til senere brug -->
+  <section></section>
+
+  <!-- Headersektion med en billedkarusel -->
+  <header>
+    <!-- Container til billedkarusellen -->
+    <div class="carousel-container">
+      <!-- Wrapper til at indeholde alle billederne -->
+      <div class="carousel-wrapper">
+        <!-- Hvert item i billedkarusellen -->
+        <div class="carousel-item">
+          <div class="BADMINTON"><p>BADMINTON</p></div>
+          <img src="badminton.png" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+          <div class="FODBOLD"><p>FODBOLD</p></div>
+          <img src="fodbold.png" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+          <div class="LØB"><p>LØB</p></div>
+          <img src="løb.png" alt="Image 3">
+        </div>
+        <div class="carousel-item">
+          <div class="MOTION"><p>MOTION</p></div>
+          <img src="motion.png" alt="Image 4">
+        </div>
+        <div class="carousel-item">
+          <div class="VOLLY"><p>VOLLY</p></div>
+          <img src="volley.png" alt="Image 5">
+        </div>
+        <!-- Tilføj flere items efter behov -->
+      </div>
+
+      <!-- Navigationsknapper for billedkarusellen -->
+      <div class="carousel-nav">
+        <button class="carousel-button" onclick="prevSlide()">❮</button>
+        <button class="carousel-button" onclick="nextSlide()">❯</button>
+      </div>
+    </div>
+
+    <!-- JavaScript-sektion til styring af billedkarusellen -->
+    <script>
+  /*
+ * Dette JavaScript-kode giver mulighed for at vise en række billeder i en karrusel.
+ * Karussellen kan navigeres ved hjælp af knapper til venstre og højre.
+ */
+
+/*
+ * Definerer en variabel kaldet `currentIndex`, der bruges til at holde styr på det aktuelle billede, der vises.
+ */     let currentIndex = 0;
+
+  /*
+ * Funktion, der viser det specifikke billede, der angives af `index`-parameteren.
+ */     function showSlide(index) {
+
+  /*
+   * * `.carousel-wrapper`: Dette element omslutter karussellen.
+   * * `.carousel-item`: Dette element repræsenterer hvert billede i karussellen.
+   * * `totalItems`: Dette er antallet af billeder i karussellen.
+   */
+        const wrapper = document.querySelector('.carousel-wrapper');
+        const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+
+    /*
+   * Kontrollerer, om `index` er mindre end 0 eller større end eller lig med antallet af billeder.
+   * Hvis det er tilfældet, justerer `currentIndex`-variablen for at sikre, at den forbliver inden for det gyldige område.
+   */
+        if (index < 0) {
+          currentIndex = totalItems - 1;
+        } else if (index >= totalItems) {
+          currentIndex = 0;
+        } else {
+          currentIndex = index;
+        }
+ /*
+   * Beregn `translateValue`-værdien baseret på `currentIndex` og angiver `transform`-egenskaben for `.carousel-wrapper`-elementet til at oversætte indholdet til venstre, hvilket effektivt viser det ønskede billede.
+   */
+        const translateValue = -100 * currentIndex + '%';
+        wrapper.style.transform = 'translateX(' + translateValue + ')';
+      }
+/*
+ * Funktioner, der hedder `showSlide()`-funktionen med det passende indeks for at navigere til det næste eller forrige billede.
+ */
+      function nextSlide() {
+        showSlide(currentIndex + 1);
+      }
+
+      function prevSlide() {
+        showSlide(currentIndex - 1);
+      }
+    </script>
+
+    <!-- Footersektion med kontaktinformation og privatlivspolitik-link -->
+    <footer>
+      <p>
+        <li class="privacy-link"><a href="privacy.html">Privatlivspolitik</a></li>
+      <p>Formand: Allan Thomsen
+        Tlf. 41741679 
+        Ath@jysk.com </p>
+
+      <p>Sekretær: Bent Jensen 
+        Tlf. 61690397
+        Bluesbent@jensen.mail.dk</p>
+
+      <p>"Dette site er kun til undervisningsbrug"</p>
+    </footer>
+  </body>
+</html>

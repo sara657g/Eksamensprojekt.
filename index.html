@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+<head>
+  <!-- Meta-information for karakterkodning og viewport-indstillinger -->
+  <meta charset="utf-8">
+  <title>Responsiv Navbar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-- Eksternt stylesheet og Font Awesome-ikonbibliotek -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <!-- Navigationsbar -->
+  <nav>
+    <!-- Checkbox til mobilresponsivitet -->
+    <!-- Checkboxen med id="check" bruges til at aktivere eller deaktivere hamburger-menuen. 
+    Når checkboxen er markeret, vises hamburger-menuen. 
+    Når den ikke er markeret, vises navigationsbarlinksene i en række. -->
+    <input type="checkbox" id="check">
+    <!-- Hamburger-menuknap -->
+    <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+    <!-- Logo i navigationsbar -->
+    <label class="logo"><img src="Logo.png" alt="Logo"></label>
+     <!-- Navigationsbarlinks -->
+    <ul>
+      <li><a class="active" href="lobbyen.html">LOBBYEN</a></li>
+      <li><a href="sport.html">SPORT</a></li>
+      <li><a href="Arrangementer.html">ARRANGEMENTER</a></li>
+      <li><a href="info.html">INFO</a></li>
+    </ul>
+  </nav>
+
+ <!-- Section til billede i css -->
+  <section></section>
+
+  <!-- Container til responsivt design med overlay og knapper -->
+  <div class="container">
+    <div class="overlay">
+      <!-- Responsiv knap for LOBBYEN -->
+      <a href="Lobbyen.html" class="responsive-button">LOBBYEN</a>
+      <!-- Responsiv knap for SPORT -->
+      <a href="sport.html" class="responsive-button">SPORT</a>
+    </div>
+  </div>
+
+  <!-- Indholdssektion med tekst-overlay -->
+  <div class="content">
+    <div class="text-overlay">
+      <p>Lind Old Boys - ”gentleman-klubben” for alle i Lind og omegn på 28+ Klubben blev dannet i</p>
+      <p>Lind 7. maj 1969 og har i dag over 100 medlemmer, men kan sagtens rumme flere. Vi har eget hyggeligt klublokale.</p>
+    </div>
+  </div>
+
+  <!-- Footersektion med kontaktoplysninger og privatlivspolitik-link -->
+  <footer>
+    <!-- Privatlivspolitik-link -->
+    <p class="privacy-link"><a href="privacy.html">Privatlivspolitik</a></p>
+    <p>Formand: Allan Thomsen Tlf. 41741679 Ath@jysk.com </p>
+    <p>Sekretær: Bent Jensen Tlf. 61690397 Bluesbent@jensen.mail.dk</p>
+    <p>"Dette site er kun til undervisningsbrug"</p>
+  </footer>
+</body>
+</html>
